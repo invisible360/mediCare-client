@@ -7,8 +7,8 @@ const NavigationBar = () => {
     return (
         <div>
             <Navbar bg="light">
-                <Container>
-                    <Navbar.Brand href="#home" >
+                <Container className='d-flex align-items-center justify-content-between'>
+                    <Navbar.Brand href="#home"  >
                         <Link to='/' className='d-flex text-decoration-none'>
                             <img
                                 alt=""
@@ -22,6 +22,7 @@ const NavigationBar = () => {
 
 
                     </Navbar.Brand>
+                        <Link>Login</Link>
                 </Container>
             </Navbar>
         </div>
