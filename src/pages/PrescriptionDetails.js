@@ -7,7 +7,8 @@ import { FaHandPointRight } from "react-icons/fa";
 import useAppState from '../hook/hook';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '../shared/Loading';
-import { BsArrowRightCircleFill } from "react-icons/bs";
+import { BsArrowLeftCircleFill } from "react-icons/bs";
+import { BsArrowiRightCircleFill } from "react-icons/bs";
 
 
 
@@ -262,9 +263,9 @@ const PrescriptionDetails = () => {
                                     </span>
                                 </th>
                                 <th className="d-flex justify-content-between">
-                                    <span className='ms-5'>Slot</span>
-                                    <span className='ms-4'>Medicine</span>
-                                    <span className='me-4'>Doses</span>
+                                    <span className='ms-md-5 d-none d-md-inline'>Slot</span>
+                                    <span className='ms-md-4'>Medicine</span>
+                                    <span className='me-md-4'>Doses</span>
                                 </th>
                                 {/* <th className='col-md-9' colSpan='3'>
                                     <div className="col-md-2">Slot</div>
@@ -276,14 +277,15 @@ const PrescriptionDetails = () => {
                         </thead>
                         <tbody>
                             <tr>
-                                <td className='col-md-3'>
+                                <td className='col-5 col-md-3'>
                                     {
                                         timeline.map((e, i) =>
-                                            <p key={i} className="mb-0"><BsArrowRightCircleFill className={`text-primary fs-4 ${e.interval.includes(date) ? 'd-inline' : 'd-none'}`} /><span className={`ms-2 ${e.interval.includes(date) ? 'text-primary fw-bold' : ''}`}>{e.start}-{e.end}</span></p>)
+                                            <p key={i} className="mb-0"><span className={`ms-md-2 ${e.interval.includes(date) ? 'text-primary fw-bold' : ''}`}>{e.start}-{e.end}</span>
+                                            <BsArrowLeftCircleFill className={`text-primary fs-4 ${e.interval.includes(date) ? 'd-inline' : 'd-none'}`} /></p>)
                                     }
 
                                 </td>
-                                <td className='col-md-9'>
+                                <td className='col-7 col-md-9'>
                                     {
                                         prescribedMedicines.map((slot, Si) =>
                                             <tr key={Si} className='text-center row g-0'>
