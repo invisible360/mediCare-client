@@ -8,7 +8,7 @@ const NavigationBar = () => {
         <div>
             <Navbar bg="light">
                 <Container className='d-flex align-items-center justify-content-between'>
-                    <Navbar.Brand href="#home"  >
+                    <Navbar.Brand >
                         <Link to='/' className='d-flex text-decoration-none'>
                             <img
                                 alt=""
@@ -22,7 +22,7 @@ const NavigationBar = () => {
 
 
                     </Navbar.Brand>
-                        <Link>Login</Link>
+                        {/* <Link>Login</Link> */}
                 </Container>
             </Navbar>
         </div>
